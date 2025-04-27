@@ -1,0 +1,57 @@
+fun dereceToFahrenheit(derece: Double): Double {
+    val fahrenheit = derece * 1.8 + 32
+    return fahrenheit
+}
+
+fun dikdortgenCevresiHesaplama(kenar1: Int, kenar2: Int): Int {
+    val cevre = (kenar1+ kenar2) * 2
+    return cevre
+}
+
+fun faktoriyelHesaplama(sayi: Int): Int {
+    var sonuc = 1
+    for (i in 1..sayi) {
+        sonuc *= i
+    }
+    return sonuc
+}
+
+fun aHarfiSayaci(kelime: String): Int {
+    var counter = 0
+    for (harf in kelime) {
+        if (harf == 'a' || harf == 'A') {
+            counter++
+        }
+    }
+    return counter
+}
+
+fun icAcilarToplami(kenarSayisi: Int): Int {
+    val icAci = (kenarSayisi - 2) * 180
+    return icAci
+}
+
+fun maasHesaplama(gunSayisi: Int): Int {
+    val toplamSaat = gunSayisi * 8
+    var maas = 0
+     if (toplamSaat <= 160) {
+        maas= toplamSaat * 10
+    } else {
+        val mesaiSaati = toplamSaat - 160
+        maas = (160 * 10) + (mesaiSaati * 20)
+    }
+  
+    return maas
+}
+
+fun kotaUcretiHesaplama(kotaMiktari: Int): Int { 
+    var kotaUcreti = 0
+    if (kotaMiktari <= 50) {
+        kotaUcreti = 100
+    } else {
+        val ekstraGB = kotaMiktari - 50
+        kotaUcreti = 100 + (ekstraGB * 4)
+    }
+    return kotaUcreti
+}
+
